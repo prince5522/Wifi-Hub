@@ -1,0 +1,19 @@
+{
+  "name": "Wi-Fi Hub",
+  "short_name": "Wi-Fi Hub",
+  "description": "Connect \u2022 Control \u2022 Protect \u2022 Monitor.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

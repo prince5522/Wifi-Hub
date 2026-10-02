@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07111f">
+<meta name="description" content="Wi-Fi Hub — Connect, Control, Protect, Monitor.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<title>Wi-Fi Hub</title>
+</head>
+<body>
+<div class="app-background" aria-hidden="true"></div>
+<div id="app">
+<header class="topbar glass">
+<button id="menuButton" class="icon-button liquid" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+<div class="brand"><img src="assets/icon.svg" alt=""><div><b>WI-FI HUB</b><small>Connect • Control • Protect • Monitor</small></div></div>
+<div id="statusPill" class="status online"><span></span><b>Online</b></div>
+</header>
+
+<aside id="sidebar" class="sidebar glass" aria-hidden="true">
+<div class="sidebar-head"><div><small>WI-FI HUB</small><h2>Navigation</h2></div><button id="closeMenu" class="icon-button liquid" aria-label="Close menu">×</button></div>
+<nav>
+<button class="nav active" data-view="dashboard">🏠 <span>Dashboard</span></button>
+<button class="nav" data-view="networks">📶 <span>My Wi-Fi</span></button>
+<button class="nav" data-view="devices">📱 <span>Devices</span></button>
+<button class="nav" data-view="doctor">🩺 <span>Wi-Fi Doctor</span></button>
+<button class="nav" data-view="community">🌍 <span>Community Wi-Fi</span></button>
+<button class="nav" data-view="assistant">🤖 <span>AI Assistant</span></button>
+</nav>
+<div class="sidebar-bottom">
+<button id="addWifi" class="nav accent">➕ <span>Add Wi-Fi</span></button>
+<button id="theme" class="nav">🎨 <span>Theme</span></button>
+<button id="settings" class="nav">⚙️ <span>Settings</span></button>
+<button id="account" class="nav">👤 <span>Login / Account</span></button>
+</div>
+</aside>
+
+<main>
+<section class="view active" data-panel="dashboard">
+<div class="hero glass">
+<div><small class="eyebrow">YOUR NETWORK COMMAND CENTER</small><h1>Welcome to Wi-Fi Hub</h1><p>A stable foundation for managing your own networks, devices, access and diagnostics.</p></div>
+<div class="orb" aria-hidden="true">⌁</div>
+</div>
+<div class="stats">
+<article class="card glass"><small>NETWORK</small><strong id="networkName">Not connected</strong><em>Ready to add your Wi-Fi</em></article>
+<article class="card glass"><small>INTERNET</small><strong id="internet">Online</strong><em id="internetDetail">Connection available</em></article>
+<article class="card glass"><small>DEVICES</small><strong id="devices">0</strong><em>Connected devices</em></article>
+<article class="card glass"><small>PLAN</small><strong>Basic</strong><em>Upgrade when ready</em></article>
+</div>
+<h2 class="section-title">Quick actions</h2>
+<div class="actions">
+<button class="action glass liquid" data-action="add">📶<b>Add Wi-Fi</b><small>Set up a network</small></button>
+<button class="action glass liquid" data-action="devices">📱<b>Devices</b><small>View devices</small></button>
+<button class="action glass liquid" data-action="doctor">🩺<b>Wi-Fi Doctor</b><small>Check network health</small></button>
+<button class="action glass liquid" data-action="assistant">🤖<b>AI Assistant</b><small>Help and guidance</small></button>
+</div>
+<div id="offline" class="offline glass" hidden>📡 <div><b>System Offline</b><p>Saved app content remains available. Live features resume when connectivity returns.</p></div></div>
+</section>
+
+<section class="view" data-panel="networks"><div class="page glass"><small class="eyebrow">NETWORKS</small><h1>My Wi-Fi</h1><p>Your saved networks will live here. Secure router integrations are added as separate modules.</p><button class="primary liquid" data-action="add">＋ Add Wi-Fi</button></div></section>
+<section class="view" data-panel="devices"><div class="page glass"><small class="eyebrow">DEVICE CENTER</small><h1>Devices</h1><p>Device discovery and approved router controls will be isolated from the core app shell.</p></div></section>
+<section class="view" data-panel="doctor"><div class="page glass"><small class="eyebrow">DIAGNOSTICS</small><h1>Wi-Fi Doctor</h1><p>Each diagnostic test will fail safely without taking down the rest of the app.</p></div></section>
+<section class="view" data-panel="community"><div class="page glass"><small class="eyebrow">COMMUNITY</small><h1>Community Wi-Fi</h1><p>Owner-shared networks and discovery will be added later.</p></div></section>
+<section class="view" data-panel="assistant"><div class="page glass"><small class="eyebrow">ASSISTANT</small><h1>AI Assistant</h1><p>The assistant will remain an independent service so it cannot bring down the application.</p></div></section>
+</main>
+
+<div id="modal"></div><div id="toast" aria-live="polite"></div>
+</div>
+<script src="js/storage.js" defer></script>
+<script src="js/modules.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
